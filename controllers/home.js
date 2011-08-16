@@ -1,22 +1,27 @@
-var cradle = require('cradle'),
-    couchdb = new (cradle.Connection)(),
-    HOME = module.exports = {};
+var Home = module.exports.Home = function (couchdb) {
+  if (!(this instanceof Home)) {
+    return new Home(couchdb); // catch calls without 'new'
+  }
+  this.couchdb = couchdb;
+};
 
-HOME.get = function(req, res) {
-  user = req.getAuthDetails().user
-  res.render('index', { title: "Home", username: user ? user.username : 'anonymous' });
+Home.prototype.get = function (req, res) {
+  res.render('index', {
+    title: "Home",
+    username: req.username || 'unknown surfer', 
+  });
 };
   
-HOME.test = function(req, res) {
-  couchdb.info(function (err, data) {
-    if (err === null) {
-      console.log(data);
+Home.prototype.test = function (req, res) {
+  this.couchdb.get('', function (error, json) {
+    if (error === null) {
       res.render('index', {
-        title: JSON.stringify(data)
+        title: JSON.stringify(json),
+        username: req.username || 'unknown surfer'
       });
     } else {
-      console.log(JSON.stringify(err));
-      throw err;
+      console.log('%s: %s', error.name, error.message);
+      res.render('error', { title: error.name, message: error.message });
     }
   });
 };

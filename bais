@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+var sys = require('sys'),
+    path = require('path'),
+    argv = require('optimist').argv,
+    server = require(__dirname + '/etc/server'),
+    app, options, help, address;
+    
+help = [
+    "usage: bais [options]",
+    "",
+    "Start a BioNLP Annotation Interoperability Server",
+    "",
+    "options:",
+    "  -h, --host     Host that you want the server to use [localhost]",
+    "  -p, --port     Port that you want the server to run on [8080]",
+    "  -c, --couch    CouchDB URL incl. auth. [http://localhost:5984]",
+    "  --help         This help",
+].join('\n');
+
+if (argv.h || argv.help) {
+  return sys.puts(help);
+}
+
+options = {
+  host: argv.h || argv.host || 'localhost',
+  port: argv.p || argv.port || 8080,
+  couch: argv.c || argv.couch || 'http://localhost:5984', 
+};
+
+app = server.createServer(
+  options.port, options.host, options.couch
+);
+address = app.address();
+
+console.log(
+  "BAIS listening at %s:%d in %s mode",
+  address.address, address.port, app.settings.env
+);

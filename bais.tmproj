@@ -3,9 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app.js</string>
+	<string>views/index.jade</string>
 	<key>documents</key>
 	<array>
+		<dict>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
+			<string>controllers</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>controllers</string>
+		</dict>
+		<dict>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
+			<string>models</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>models</string>
+		</dict>
 		<dict>
 			<key>expanded</key>
 			<true/>
@@ -15,6 +35,14 @@
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
 			<key>sourceDirectory</key>
 			<string>public</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>tests</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>tests</string>
 		</dict>
 		<dict>
 			<key>expanded</key>
@@ -30,13 +58,13 @@
 			<key>filename</key>
 			<string>app.js</string>
 			<key>lastUsed</key>
-			<date>2011-08-11T15:17:36Z</date>
+			<date>2011-08-12T17:54:15Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>package.json</string>
 			<key>lastUsed</key>
-			<date>2011-08-10T14:57:30Z</date>
+			<date>2011-08-12T17:38:19Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -54,14 +82,42 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>33</integer>
+				<integer>19</integer>
 				<key>line</key>
-				<integer>64</integer>
+				<integer>18</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>26</integer>
+			<integer>0</integer>
+		</dict>
+		<key>controllers/home.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>71</integer>
+				<key>line</key>
+				<integer>6</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>controllers/http_auth.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>7</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 		<key>package.json</key>
 		<dict>
@@ -77,16 +133,47 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>views/index.jade</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>33</integer>
+				<key>line</key>
+				<integer>1</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>app.js</string>
+		<string>views/index.jade</string>
+		<string>controllers/http_auth.js</string>
+		<string>controllers/home.js</string>
 		<string>package.json</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>treeState</key>
 	<dict>
+		<key>controllers</key>
+		<dict>
+			<key>isExpanded</key>
+			<true/>
+			<key>subItems</key>
+			<dict/>
+		</dict>
+		<key>models</key>
+		<dict>
+			<key>isExpanded</key>
+			<true/>
+			<key>subItems</key>
+			<dict/>
+		</dict>
 		<key>public</key>
 		<dict>
 			<key>isExpanded</key>
@@ -103,6 +190,6 @@
 		</dict>
 	</dict>
 	<key>windowFrame</key>
-	<string>{{310, 40}, {661, 825}}</string>
+	<string>{{191, 48}, {661, 825}}</string>
 </dict>
 </plist>
