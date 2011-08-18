@@ -363,7 +363,7 @@ exports.resource = testCase({
 });
 
 function assertApiMethod(test, method, data) {
-  test.equals(method(test, 'data'), data);
+  test.equals(method(test, 'callback', data), data === true ? null : data);
   test.expect(2);
   test.done();
 }
@@ -409,10 +409,22 @@ exports.restapi = testCase({
     assertApiMethod(test, this.conn.post.bind(this.conn), 'data');
   },
   
+  'CouchClient.post() - raw, no data':
+  function (test) {
+    this.method = 'POST';
+    assertApiMethod(test, this.conn.post.bind(this.conn), true);
+  },
+  
   'CouchClient.put()':
   function (test) {
     this.method = 'PUT';
     assertApiMethod(test, this.conn.put.bind(this.conn), 'data');
+  },
+  
+  'CouchClient.put() - raw, no data':
+  function (test) {
+    this.method = 'PUT';
+    assertApiMethod(test, this.conn.put.bind(this.conn), true);
   },
 });
 
