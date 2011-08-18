@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>views/index.jade</string>
+	<string>etc/couchdb.js</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -20,6 +20,16 @@
 			<key>expanded</key>
 			<true/>
 			<key>name</key>
+			<string>etc</string>
+			<key>regexFolderFilter</key>
+			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+			<key>sourceDirectory</key>
+			<string>etc</string>
+		</dict>
+		<dict>
+			<key>expanded</key>
+			<true/>
+			<key>name</key>
 			<string>models</string>
 			<key>regexFolderFilter</key>
 			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
@@ -27,8 +37,6 @@
 			<string>models</string>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>public</string>
 			<key>regexFolderFilter</key>
@@ -56,35 +64,49 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>app.js</string>
+			<string>bais</string>
 			<key>lastUsed</key>
-			<date>2011-08-12T17:54:15Z</date>
+			<date>2011-08-16T02:17:54Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>package.json</string>
 			<key>lastUsed</key>
-			<date>2011-08-12T17:38:19Z</date>
+			<date>2011-08-15T23:58:58Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>README</string>
 			<key>lastUsed</key>
-			<date>2011-08-10T15:03:15Z</date>
+			<date>2011-08-15T23:59:00Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app.js</key>
+		<key>README</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>4</integer>
 				<key>line</key>
-				<integer>18</integer>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>bais</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>12</integer>
+				<key>line</key>
+				<integer>11</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -96,21 +118,49 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>71</integer>
+				<integer>29</integer>
 				<key>line</key>
-				<integer>6</integer>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>controllers/http_auth.js</key>
+		<key>etc/authentication.js</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>39</integer>
+				<key>line</key>
+				<integer>35</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>etc/couchdb.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>39</integer>
+				<key>line</key>
+				<integer>373</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>109</integer>
+		</dict>
+		<key>etc/server.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>2</integer>
 				<key>line</key>
 				<integer>7</integer>
 			</dict>
@@ -133,14 +183,56 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>public/stylesheets/style.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>views/error.jade</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>views/index.jade</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>33</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>1</integer>
+				<integer>2</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>views/layout.jade</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -150,11 +242,17 @@
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>app.js</string>
 		<string>views/index.jade</string>
-		<string>controllers/http_auth.js</string>
+		<string>views/layout.jade</string>
+		<string>public/stylesheets/style.css</string>
+		<string>bais</string>
+		<string>views/error.jade</string>
+		<string>etc/authentication.js</string>
 		<string>controllers/home.js</string>
+		<string>etc/couchdb.js</string>
+		<string>etc/server.js</string>
 		<string>package.json</string>
+		<string>README</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
@@ -167,14 +265,14 @@
 			<key>subItems</key>
 			<dict/>
 		</dict>
-		<key>models</key>
+		<key>etc</key>
 		<dict>
 			<key>isExpanded</key>
 			<true/>
 			<key>subItems</key>
 			<dict/>
 		</dict>
-		<key>public</key>
+		<key>models</key>
 		<dict>
 			<key>isExpanded</key>
 			<true/>
