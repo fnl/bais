@@ -89,6 +89,19 @@ exports.create = {
     test.done();
     db.CouchClient.prototype.setUrl = setUrl;
   },
+  
+  'with default headers':
+  function (test) {
+    var expected = expectedClient(),
+        conn = db.CouchClient({
+      'Content-Type': 'sentinel',
+      'other': 'header'
+    });
+    expected.options.headers = { 'other': 'header' };
+    expected.default_content_type = 'sentinel';
+    assertClientProperties.call(test, conn, expected);
+    test.done();
+  },
 };
 
 exports.setUrl = testCase({
